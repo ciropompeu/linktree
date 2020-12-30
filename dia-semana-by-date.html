@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dia da semana que você nasceu</title>
+</head>
+
+<body>
+
+    <center>
+        <input type="date" id="aniv" value="dd/mm/aaaa"> digite a data do seu nascimento e <button
+            onclick="diaSemana()">clique aqui</button>
+    </center>
+    <p id="demo"></p>
+
+    <script>
+
+
+        const diaSemana = () => {
+
+            let resultado = new Date(document.getElementById("aniv").value);
+            document.getElementById("demo").innerHTML = qualDiaSem(resultado.getDay());
+
+        }
+
+        let qualDiaSem = valor => {
+            switch (valor) {
+                case (6):
+                    return "domingo";
+                    break;
+
+                case (0):
+                    return "segunda-feira";
+                    break;
+
+                case (1):
+                    return "terça-feira";
+                    break;
+
+                case (2):
+                    return "quarta-feira";
+                    break;
+
+                case (3):
+                    return "quinta-feira";
+                    break;
+
+                case (4):
+                    return "sexta-feira";
+                    break;
+
+                default:
+                    return "sábado";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
