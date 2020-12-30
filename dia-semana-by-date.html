@@ -9,7 +9,7 @@
 <body>
 
     <center>
-        <input type="date" id="aniv" value="dd/mm/aaaa"> digite a data do seu nascimento e <button
+        <input type="date" id="aniv" value="mm/dd/aaaa"> digite a data do seu nascimento e <button
             onclick="diaSemana()">clique aqui</button>
     </center>
     <p id="demo"></p>
@@ -20,7 +20,7 @@
         const diaSemana = () => {
 
             let resultado = new Date(document.getElementById("aniv").value);
-            document.getElementById("demo").innerHTML = qualDiaSem(resultado.getDay());
+            document.getElementById("demo").innerHTML = "este dia foi "+qualDiaSem(resultado.getDay());
 
         }
 
@@ -50,8 +50,12 @@
                     return "sexta-feira";
                     break;
 
-                default:
+                    case (5):
                     return "sábado";
+                    break;
+
+                default:
+                    return "um lindo dia de sol";
             }
         }
     </script>
